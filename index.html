@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smart Dairy | Modern Dairy Management</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Smart Dairy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="index.html" data-i18n="navHome">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="farmers.html" data-i18n="navFarmers">Farmers</a></li>
+          <li class="nav-item"><a class="nav-link" href="animals.html" data-i18n="navAnimals">Animals</a></li>
+          <li class="nav-item"><a class="nav-link" href="milk-collection.html" data-i18n="navMilk">Milk</a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html" data-i18n="navBilling">Billing</a></li>
+          <li class="nav-item"><a class="nav-link" href="inventory.html" data-i18n="navInventory">Inventory</a></li>
+        </ul>
+        <select id="languageSelect" class="form-select form-select-sm ms-lg-3 lang-select">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+        <a class="btn btn-primary ms-lg-3" href="#cta" data-i18n="navCTA">Request Demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="row align-items-center">
+      <div class="col-lg-6">
+        <p class="badge rounded-pill text-bg-success-soft mb-3">Lightweight · Role-based · Real-time</p>
+        <h1 class="display-5 fw-bold" data-i18n="heroTitle">Smart Dairy is your digital command center for every litre collected.</h1>
+        <p class="lead text-secondary mt-3" data-i18n="heroDesc">Modernize farmer records, track animal productivity, automate milk runs, and generate transparent billing—built for small and medium dairies.</p>
+        <div class="d-flex flex-wrap gap-3 mt-4">
+          <a class="btn btn-primary btn-lg" href="milk-collection.html" data-i18n="heroPrimary">Log Milk Collection</a>
+          <a class="btn btn-outline-secondary btn-lg" href="#features" data-i18n="heroSecondary">See Features</a>
+        </div>
+        <div class="d-flex gap-4 mt-4 text-secondary small">
+          <div><span class="h4 d-block mb-1">98%</span>Accuracy in calculations</div>
+          <div><span class="h4 d-block mb-1">5x</span>Faster daily close</div>
+          <div><span class="h4 d-block mb-1">3</span>User roles secured</div>
+        </div>
+      </div>
+      <div class="col-lg-6 mt-5 mt-lg-0">
+        <div class="hero-card">
+          <img class="w-100 rounded-4" src="https://cdn.pixabay.com/photo/2017/01/31/17/44/cow-2025809_1280.png" alt="Cartoon cow">
+          <div class="floating-card shadow">
+            <p class="text-muted mb-2">Today’s Collection</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div>
+                <h4 class="mb-0">1,240 L</h4>
+                <small class="text-success">+6.4% vs yesterday</small>
+              </div>
+              <span class="badge text-bg-primary">Auto balanced</span>
+            </div>
+            <div class="progress mt-3" role="progressbar" aria-valuenow="64" aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar" style="width: 64%">Evening shift</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="py-5 bg-light" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <p class="badge rounded-pill text-bg-primary-soft">Core Modules</p>
+          <h2 class="fw-bold" data-i18n="featuresHeading">Everything you need to run a precise dairy operation</h2>
+          <p class="text-secondary" data-i18n="featuresSub">Modular pages keep data tidy—farmer, animal, milk, billing, and inventory.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-primary-subtle text-primary mb-3"><i class="bi bi-people"></i></div>
+                <h5 class="card-title">Digital Farmer Files</h5>
+                <p class="card-text text-secondary">Searchable farmer & staff records with contact, bank, and route notes.</p>
+                <a href="farmers.html" class="link-primary">Open farmer module →</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-success-subtle text-success mb-3"><i class="bi bi-cpu"></i></div>
+                <h5 class="card-title">Animal Productivity</h5>
+                <p class="card-text text-secondary">Track breed, health IDs, and yield trends to spot underperformers.</p>
+                <a href="animals.html" class="link-primary">Open animal module →</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-warning-subtle text-warning mb-3"><i class="bi bi-droplet-half"></i></div>
+                <h5 class="card-title">Milk Collection</h5>
+                <p class="card-text text-secondary">Automated shift-wise entries with solids, fat %, and payments.</p>
+                <a href="milk-collection.html" class="link-primary">Open milk module →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row g-4 mt-1">
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-danger-subtle text-danger mb-3"><i class="bi bi-receipt"></i></div>
+                <h5 class="card-title">Billing Automation</h5>
+                <p class="card-text text-secondary">Generate date-range bills instantly with transparent deductions.</p>
+                <a href="billing.html" class="link-primary">Open billing →</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-info-subtle text-info mb-3"><i class="bi bi-box-seam"></i></div>
+                <h5 class="card-title">Product Inventory</h5>
+                <p class="card-text text-secondary">Monitor ghee, paneer, butter, curd stock and reorder alerts.</p>
+                <a href="inventory.html" class="link-primary">Open inventory →</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card">
+              <div class="card-body">
+                <div class="icon-circle bg-secondary-subtle text-secondary mb-3"><i class="bi bi-shield-lock"></i></div>
+                <h5 class="card-title">Role-based Access</h5>
+                <p class="card-text text-secondary">Admin, Staff, and Farmer views control who can edit or view data.</p>
+                <a href="#roles" class="link-primary">See role previews →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="villages">
+      <div class="container">
+        <div class="section-heading text-center">
+          <p class="badge rounded-pill text-bg-success-soft">Village help</p>
+          <h2 class="fw-bold" data-i18n="villageTitle">Made for village dairy farms</h2>
+          <p class="text-secondary" data-i18n="villageDesc">Simple workflows, low bandwidth friendly pages, and clear language to guide staff.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4">
+            <div class="card h-100 feature-card text-center p-3">
+              <img src="https://cdn.pixabay.com/photo/2013/07/12/18/35/cow-153662_1280.png" class="img-fluid mb-3" alt="Cartoon cow help">
+              <h6 class="fw-bold" data-i18n="villagePoint1">Step-by-step guidance for daily milk entries</h6>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card text-center p-3">
+              <img src="https://cdn.pixabay.com/photo/2014/04/03/00/35/cow-308359_1280.png" class="img-fluid mb-3" alt="Cartoon cow offline">
+              <h6 class="fw-bold" data-i18n="villagePoint2">Offline-first layouts ready to pair with PHP/MySQL</h6>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="card h-100 feature-card text-center p-3">
+              <img src="https://cdn.pixabay.com/photo/2016/11/20/09/08/cow-1849028_1280.png" class="img-fluid mb-3" alt="Cartoon cow training">
+              <h6 class="fw-bold" data-i18n="villagePoint3">Cartoon cow visuals to make training easier</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5" id="roles">
+      <div class="container">
+        <div class="row g-4 align-items-center">
+          <div class="col-lg-5">
+            <p class="badge rounded-pill text-bg-secondary-soft">Role-based Access</p>
+            <h3 class="fw-bold">Admins configure, staff execute, farmers monitor.</h3>
+            <p class="text-secondary">Switch between personas to see tailored actions. This is a UI preview; hook it to PHP sessions later.</p>
+            <div class="btn-group" role="group">
+              <button class="btn btn-outline-primary active" data-role="admin">Admin</button>
+              <button class="btn btn-outline-primary" data-role="staff">Staff</button>
+              <button class="btn btn-outline-primary" data-role="farmer">Farmer</button>
+            </div>
+            <ul class="list-unstyled mt-3 text-secondary small">
+              <li>• Admins approve payouts, manage users, and inventory thresholds.</li>
+              <li>• Staff log milk shifts, animal health, and stock movement.</li>
+              <li>• Farmers view statements, collection history, and yields.</li>
+            </ul>
+          </div>
+          <div class="col-lg-7">
+            <div class="card role-card" id="roleCard">
+              <div class="card-body">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h5 class="mb-0">Admin dashboard</h5>
+                  <span class="badge text-bg-dark">Sample UI</span>
+                </div>
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <div class="mini-tile">
+                      <p class="text-secondary small mb-1">Milk collected</p>
+                      <h4 class="mb-0">2,470 L</h4>
+                      <small class="text-success">+4.2% week</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mini-tile">
+                      <p class="text-secondary small mb-1">Pending payouts</p>
+                      <h4 class="mb-0">₹84,300</h4>
+                      <small class="text-warning">12 farmers</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mini-tile">
+                      <p class="text-secondary small mb-1">Animals flagged</p>
+                      <h4 class="mb-0">3</h4>
+                      <small class="text-danger">Check health IDs</small>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="mini-tile">
+                      <p class="text-secondary small mb-1">Inventory cover</p>
+                      <h4 class="mb-0">9 days</h4>
+                      <small class="text-secondary">Butter low</small>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-3">
+                  <p class="text-secondary small mb-2">Quick actions</p>
+                  <div class="d-flex flex-wrap gap-2">
+                    <span class="badge text-bg-primary">Approve bill run</span>
+                    <span class="badge text-bg-success">Sync milk meters</span>
+                    <span class="badge text-bg-warning">Reorder ghee</span>
+                    <span class="badge text-bg-secondary">Download report</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-5 bg-light" id="cta">
+      <div class="container">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <h3 class="fw-bold" data-i18n="ctaHeadline">Ready to digitize your dairy?</h3>
+            <p class="text-secondary mb-0" data-i18n="ctaSub">Connect this frontend to PHP/MySQL and start capturing real data. The UI is modular, responsive, and production-ready.</p>
+          </div>
+          <div class="col-lg-4 text-lg-end">
+            <a class="btn btn-primary btn-lg" href="farmers.html" data-i18n="ctaButton">Start with farmer records</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between small">
+      <span class="text-secondary">Smart Dairy · Responsive frontend · Bootstrap 5</span>
+      <div class="d-flex gap-3">
+        <a href="billing.html" class="text-decoration-none">Billing</a>
+        <a href="inventory.html" class="text-decoration-none">Inventory</a>
+        <a href="milk-collection.html" class="text-decoration-none">Milk</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

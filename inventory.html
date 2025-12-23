@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inventory | Smart Dairy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Smart Dairy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="navHome">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="farmers.html" data-i18n="navFarmers">Farmers</a></li>
+          <li class="nav-item"><a class="nav-link" href="animals.html" data-i18n="navAnimals">Animals</a></li>
+          <li class="nav-item"><a class="nav-link" href="milk-collection.html" data-i18n="navMilk">Milk</a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html" data-i18n="navBilling">Billing</a></li>
+          <li class="nav-item"><a class="nav-link active" href="inventory.html" data-i18n="navInventory">Inventory</a></li>
+        </ul>
+        <select id="languageSelect" class="form-select form-select-sm ms-lg-3 lang-select">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+        <a class="btn btn-primary ms-lg-3" href="milk-collection.html">Log Milk</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero bg-white border-bottom">
+    <div class="container">
+      <p class="page-breadcrumb mb-1">Operations · Inventory</p>
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <h2 class="fw-bold mb-1">Manage dairy product inventory</h2>
+          <p class="text-secondary mb-0">Stock levels for ghee, paneer, butter, curd with reorder cues.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary">Download report</button>
+          <button class="btn btn-primary">Add stock</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card table-card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <h5 class="mb-0">Products</h5>
+              <div class="d-flex gap-2">
+                <select class="form-select form-select-sm w-auto">
+                  <option>All</option>
+                  <option>Healthy</option>
+                  <option>Low</option>
+                  <option>Critical</option>
+                </select>
+                <button class="btn btn-outline-secondary btn-sm">Reorder</button>
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Item</th>
+                    <th>Stock</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="inventoryTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Inventory">
+          <div class="card-body">
+            <h6 class="fw-bold">Storage tips</h6>
+            <p class="text-secondary small mb-2">Keep butter under 4°C and curd below 7°C. Track expiry batches daily.</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary btn-sm">Create batch</button>
+              <button class="btn btn-outline-secondary btn-sm">Label print</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h6 class="fw-bold">Add stock movement</h6>
+            <div class="row g-2">
+              <div class="col-12">
+                <label class="form-label small">Product</label>
+                <input class="form-control" placeholder="Butter 500g">
+              </div>
+              <div class="col-6">
+                <label class="form-label small">Quantity</label>
+                <input class="form-control" placeholder="25 kg">
+              </div>
+              <div class="col-6">
+                <label class="form-label small">Type</label>
+                <select class="form-select">
+                  <option>Inbound</option>
+                  <option>Outbound</option>
+                </select>
+              </div>
+              <div class="col-12">
+                <label class="form-label small">Notes</label>
+                <textarea class="form-control" rows="2" placeholder="Supplier, batch, expiry"></textarea>
+              </div>
+              <div class="col-12 d-grid">
+                <button class="btn btn-primary">Record stock</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between small">
+      <span class="text-secondary">Smart Dairy · Inventory module</span>
+      <div class="d-flex gap-3">
+        <a href="billing.html" class="text-decoration-none">Billing</a>
+        <a href="milk-collection.html" class="text-decoration-none">Milk</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+

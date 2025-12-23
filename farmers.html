@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Farmers | Smart Dairy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg fixed-top glass-nav">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Smart Dairy</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html" data-i18n="navHome">Home</a></li>
+          <li class="nav-item"><a class="nav-link active" href="farmers.html" data-i18n="navFarmers">Farmers</a></li>
+          <li class="nav-item"><a class="nav-link" href="animals.html" data-i18n="navAnimals">Animals</a></li>
+          <li class="nav-item"><a class="nav-link" href="milk-collection.html" data-i18n="navMilk">Milk</a></li>
+          <li class="nav-item"><a class="nav-link" href="billing.html" data-i18n="navBilling">Billing</a></li>
+          <li class="nav-item"><a class="nav-link" href="inventory.html" data-i18n="navInventory">Inventory</a></li>
+        </ul>
+        <select id="languageSelect" class="form-select form-select-sm ms-lg-3 lang-select">
+          <option value="en">English</option>
+          <option value="hi">हिंदी</option>
+          <option value="mr">मराठी</option>
+        </select>
+        <a class="btn btn-primary ms-lg-3" href="billing.html">Generate Bill</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero bg-white border-bottom">
+    <div class="container">
+      <p class="page-breadcrumb mb-1">Records · Farmers</p>
+      <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+        <div>
+          <h2 class="fw-bold mb-1">Farmer & Staff Records</h2>
+          <p class="text-secondary mb-0">Centralized digital files with contact, banking, and route details.</p>
+        </div>
+        <div class="d-flex gap-2">
+          <button class="btn btn-outline-secondary">Export CSV</button>
+          <button class="btn btn-primary">New Farmer</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container my-4">
+    <div class="row g-4">
+      <div class="col-lg-8">
+        <div class="card table-card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-3 flex-wrap gap-2">
+              <h5 class="mb-0">Directory</h5>
+              <div class="input-group w-auto">
+                <span class="input-group-text bg-white"><i class="bi bi-search"></i></span>
+                <input class="form-control" placeholder="Search by name or village">
+              </div>
+            </div>
+            <div class="table-responsive">
+              <table class="table align-middle">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Village/Route</th>
+                    <th>Phone</th>
+                    <th>Bank</th>
+                    <th>Month-to-date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="farmerTable"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card mb-4">
+          <img src="https://images.unsplash.com/photo-1500595046743-cd271d694d30?auto=format&fit=crop&w=900&q=80" class="card-img-top" alt="Farmer">
+          <div class="card-body">
+            <h6 class="fw-bold">Profile snapshot</h6>
+            <p class="text-secondary small mb-1">Farmer: Ravi Kumar</p>
+            <p class="text-secondary small mb-3">Route: Mandya · Phone: 98765 43210</p>
+            <div class="d-flex gap-2">
+              <button class="btn btn-outline-primary btn-sm">View ledger</button>
+              <button class="btn btn-outline-secondary btn-sm">Call</button>
+            </div>
+          </div>
+        </div>
+        <div class="card card-ghost">
+          <div class="card-body">
+            <h6 class="fw-bold">Add new record</h6>
+            <div class="row g-2">
+              <div class="col-12">
+                <label class="form-label small">Full name</label>
+                <input class="form-control" placeholder="Enter full name">
+              </div>
+              <div class="col-12">
+                <label class="form-label small">Village / Route</label>
+                <input class="form-control" placeholder="e.g., Mandya Route 2">
+              </div>
+              <div class="col-6">
+                <label class="form-label small">Phone</label>
+                <input class="form-control" placeholder="98765 43210">
+              </div>
+              <div class="col-6">
+                <label class="form-label small">Bank (IFSC)</label>
+                <input class="form-control" placeholder="SBI0000123">
+              </div>
+              <div class="col-12">
+                <label class="form-label small">Notes</label>
+                <textarea class="form-control" rows="2" placeholder="Pickup time, quality remarks"></textarea>
+              </div>
+              <div class="col-12 d-grid">
+                <button class="btn btn-primary">Save farmer</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-4 border-top bg-white">
+    <div class="container d-flex flex-wrap align-items-center justify-content-between small">
+      <span class="text-secondary">Smart Dairy · Farmer module</span>
+      <div class="d-flex gap-3">
+        <a href="index.html" class="text-decoration-none">Home</a>
+        <a href="billing.html" class="text-decoration-none">Billing</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
+
